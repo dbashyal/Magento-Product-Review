@@ -1,0 +1,46 @@
+<?php
+/**
+ * Technooze_Treview extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Technooze
+ * @package    Technooze_Treview
+ * @copyright  Copyright (c) 2008 Technooze LLC
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+ *
+ * @category Technooze
+ * @package  Technooze_Treview
+ * @module   Treview
+ * @author   Damodar Bashyal (enjoygame @ hotmail.com)
+ */
+ ?>
+<?php $_items = $this->getReviewsCollection()->getItems(); ?>
+<div class="box-collateral box-reviews" id="customer-reviews">
+<?php if (count($_items)):?>
+    <div class="box-title">
+        <h2><?php echo $this->__('Customer Reviews') ?></h2>
+    </div>
+    <dl class="box-content" id="product-reviews-list-<?php echo $this->getProduct()->getId() ?>">
+    <?php foreach ($_items as $_review): ?>
+        <dt>
+            <a href="<?php echo $this->getReviewUrl($_review->getId()) ?>"><?php echo $this->htmlEscape($_review->getTitle()) ?></a>
+            <?php echo $this->__('Review by %s', $this->htmlEscape($_review->getNickname())) ?>
+        </dt>
+        <dd>
+            <p><?php echo nl2br($this->htmlEscape($_review->getDetail())) ?></p>
+            <p class="date"><?php echo $this->__('(Posted on %s)', $this->formatDate($_review->getCreatedAt()), 'long') ?></p>
+        </dd>
+    <?php endforeach; ?>
+    </dl>
+    <script type="text/javascript">decorateGeneric($$('#product-reviews-list-<?php echo $this->getProduct()->getId() ?> dd'), ['last']);</script>
+<?php endif;?>
+</div>

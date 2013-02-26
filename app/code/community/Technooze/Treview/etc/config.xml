@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!--
 /**
  * Technooze_Treview extension
@@ -23,7 +24,6 @@
  * @author   Damodar Bashyal (enjoygame @ hotmail.com)
  */
  -->
-<?xml version="1.0"?>
 <config>
     <modules>
         <Technooze_Treview>
