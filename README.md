@@ -12,4 +12,4 @@ on layout call reviews on a tab like this
 </block>
 ```
 
-###visit: http://learntipsandtricks.com/ for more magento tips, tricks and codes.
+###visit: http://dltr.org/ for more magento tips, tricks and codes.
