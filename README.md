@@ -1,6 +1,8 @@
 Magento Product Review
 ======================
 
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=dbashyal&url=https://github.com/dbashyal&title=Github Repos&language=&tags=github&category=software)
+
 Displaying magento product reviews on a tab in collateral-tabs
 
 on layout call reviews on a tab like this
